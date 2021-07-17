@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es" xmlns="th:http://www.thymeleaf.org/"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="th:http://www.thymeleaf.org/ ">
+<head>
+	<meta charset="UTF-8">
+	<title th:text="${titulo}">Title</title>
+</head>
+<body>
+	<h1 th:text="${titulo}"></h1>
+	<table>
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>NOMBRE</th>
+				<th>PRECIO</th>
+				<th>FECHA</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="producto: ${productos}">
+				<td th:text="${producto.id}"></td>
+				<td th:text="${producto.nombre}"></td>
+				<td th:text="${producto.precio}"></td>
+				<td th:text="${producto.createdAt}"></td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
